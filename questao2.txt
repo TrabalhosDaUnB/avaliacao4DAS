@@ -1,0 +1,33 @@
+Questão 2: Java Remote Method Invocation (JavaRMI) é uma biblioteca de Java utilizada para desenvolver aplicações que utilizam métodos distribuídos de maneira similar à
+aplicações não distribuídas. Apesar de não ser definida explicitamente como um framework, JavaRMI define um conjunto de elementos arquiteturais que devem ser considerados
+durante o desenvolvimento da aplicação pelo desenvolvedor, a saber: a) stub, b) skeleton, c) registro e d) serialização (marshalling e unmarshalling) e invocação remota
+de métodos. Para maiores detalhes vide o tutorial presente em https://www.oracle.com/technetwork/java/javase/tech/index-jsp-138781.html.
+Apresentados os elementos arquiteturais de JavaRMI, relacione-os aos elementos arquiteturais apresentados na Figura 1 do texto de Spagnoli e Becker (2003). Justifique
+sua resposta de modo a identificar claramente a similaridade entre as definições de Spagnoli e Becker (2003) e o papel desempenhado pelos elementos de JavaRMI. Valor:
+40 pontos, 10 pontos cada elemento.
+
+RESPOSTA:
+
+  Skeleton e Stub são basicamente elementos responsáveis pela comunicação entre os componentes, do java RMI, servidor e cliente respectivamente. Ambos têm , entre as suas
+responsabilidades, a função de empacotar e desempacotar, por meio da serialização, as respostas e requisições realizadas pelo servidor e clientes como também realizar
+a transferências destas requisições e respostas. Desta maneira pode-se dizer que o skeleton e o stub podem ser comparados a alguns dos serviços encontrados na infra-estrutura
+de componentes (framework de componentes) já que está, de acordo com Brown(2000), possui um serviço que é responsável por empacotar as assinaturas de métodos em um sistema
+de DBC além de serviços referentes ao gerenciamento de transação de interações complexas entre os componentes.
+  Já o registro, em um sistema RMI, possui a função de fazer o mapeamento de identificadores de objetos remotos. Assim sendo é possível compará-lo à um componente de um
+sistema DBC pois o mesmo possui uma funcionalidade bem definida (mapear identificadores de objetos remotos), é autocontido além de poder ser reutilizado para comunicação
+com mais de um servidor.
+  A serialização, sendo a maneira na qual os stubs e skeleton transferem informação (empacotando e desempacotando informação), pode ser relacionada a um tipo de padrão
+ou convenção de um modelo de componentes. Isto pode ser afirmado pois dentre os padrões e convenções de um modelo de componente existem os referentes  às formas de interação
+de componentes. A interação realizada utilizando a serialização em um sistema java RMI é feita por stub e skeleton dos clientes e servidor respectivamente.
+
+Abaixo está uma breve definição de stub, skeleton, registro e serialização:
+
+STUB: empacota os argumentos para um método usando a serialização de objeto e envia a invocação empacotada através da conexão para o servidor.
+
+SKELETON: é responsável por desempacotar os argumentos e invocar a implementação do método do servidor. Após a implementação do servidor ser
+concluída, retornando um valor ou uma exceção, o skeleton fica responsável por empacotar o resultado e envia uma resposta para o stub do cliente.
+
+REGISTRO: É um objeto remoto que tem como função fazer o mapeamento de identificadores de objetos remotos. O registro também pode ser utilizado
+sozinho como também em uma máquina virtual com outras classes de servidores.
+
+SERIALIZAÇÃO: É a maneira pela qual os stubs e skeleton empacotam argumentos de métodos e respostas de métodos respectivamente.

@@ -1,0 +1,43 @@
+Questão 1: O Desenvolvimento Baseado em Componentes (DBC) é um método de desenvolvimento de software voltado para a reutilização de elementos previamente implementados e testados.
+Busca-se, com a utilização de tal método, aumentar a qualidade do software produzido e reduzir seu tempo de entrega. Para promover uma reutilização de componentes de maneira mais
+direta alguns elementos foram definidos de modo a guiar tanto a implementação dos componentes reutilizáveis quanto o desenvolvimento da aplicação com base na reutilização de tais
+componentes. Dentre esses elementos destacam-se o framework de componentes, o modelo de componentes e o próprio componente de software. A Figura 1 apresentada na página 11 de Spagnoli
+e Becker(2003) apresenta como esses elementos estão dispostos e relacionados em uma aplicação DBC. Para cada um desses elementos apresente claramente:
+a) uma definição do elemento
+b) seu papel (função) na abordagem DBC.
+
+RESPOSTA:
+
+
+
+Framework de Componentes
+
+a - Definição: É definido como a estrutura sobre a qual o modelo de componentes emprega seus padrões e convenções. Além disto sua infra-estrutura traz a imposição de um conjunto de
+regras e restrições ao projeto e em sua implementação onde as quais devem ser levadas em consideração pelo modelo de componentes. Framework de componentes pode ser considerado,
+também, como uma infra-estrutura de componentes.
+
+b - Função no DBC: No Desenvolvimento Baseado em Componentes o framework de componentes tem como principal função fazer a gerência de recursos compartilhados pelos componentes do
+sistema e providenciar um mecanismo que permita a interação entre estes componentes. Quando identificado como uma infra-estrutura de componentes passa a ter comumente uma das seguintes
+responsabilidades: empacotamento, distribuição, segurança, gerenciamento de transações e comunicação assíncrona.
+
+
+
+
+Modelo de Componentes
+
+a - Definição: De acordo com Bachmann (2002) um modelo de componente retrata um elemento da arquitetura de um sistema onde as convenções e padrões impostos aos componentes deste
+sistema são definidos. Espera-se que este modelo de componentes apresente, ao menos, os seguintes padrões e convenções: Tipos de componentes, formas de interação, definição de recurso.
+
+b - Função no DBC: O modelo de componentes tem como objetivo a especificação da função de cada um dos elementos de um sistema como também a forma da comunicação destes elementos
+entre si.
+
+
+
+
+Componente de Software
+
+a - Definição: Existem várias definições de componentes na literatura uma destas definições é a apresentada por Sametinger (1997) que basicamente descreve que
+“componentes de software reusáveis são artefatos autocontidos, facilmente identificáveis que descrevem e/ou executam funções específicas e têm interfaces claras, documentação apropriada
+e uma condição de reuso definida”. Podem ser definidos, também, como “a abstração seguinte a funções, módulos e classes”.
+
+b - Função no DBC: possuem a função de descrever e/ou executar funções específicas em um projeto de software além de permitir sua reutilização.
